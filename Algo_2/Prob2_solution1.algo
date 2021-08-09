@@ -1,0 +1,19 @@
+ALGORITHM same_nbr
+VAR
+    Tab_1 : ARRAY_OF INTEGER[n1];
+    Tab_2 : ARRAY_OF INTEGER[n2];
+    n1,n2: INTEGER;
+    i,j,somme: INTEGER;
+    somme:= 0;
+BEGIN
+    Write ("entrer Tab_1 et Tab_2");
+    Read (Tab_1, Tab_2);
+    Read (n1, n2);
+
+    FOR i FROM 0 TO n1-1 STEP 1  DO
+        FOR j FROM 0 TO n2-1 STEP 1  DO
+            IF (Tab_1[i]==Tab_2[j]) THEN
+                somme= somme + Tab_1[i];
+            END_IF 
+     END_FOR
+END
